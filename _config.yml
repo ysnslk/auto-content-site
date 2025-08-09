@@ -1,7 +1,7 @@
 title: CuriousWorld
 description: Fascinating Science & Facts
-baseurl: ""  # GitHub Pages için boş bırak
-url: "https://ysnslk.github.io/auto-content-site"
+baseurl: "/auto-content-site"
+url: "https://ysnslk.github.io"
 
 theme: minima
 
