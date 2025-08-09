@@ -2,7 +2,7 @@ name: Build and Deploy Jekyll Site
 
 on:
   schedule:
-    - cron: '0 8 * * *'  # her gün 08:00 UTC'de
+    - cron: '0 8 * * *'  # Her gün 08:00 UTC'de çalışır
   push:
     branches:
       - main
@@ -22,8 +22,10 @@ jobs:
         with:
           ruby-version: '3.1'
 
-      - name: Install Jekyll and Bundler
-        run: gem install jekyll bundler
+      - name: Install dependencies
+        run: |
+          gem install bundler
+          bundle install
 
       - name: Install Python and dependencies
         uses: actions/setup-python@v4
@@ -35,7 +37,7 @@ jobs:
         run: python content_generator.py
 
       - name: Build Jekyll site
-        run: jekyll build
+        run: bundle exec jekyll build
 
       - name: Commit new posts and site
         run: |
