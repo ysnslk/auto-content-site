@@ -1,1 +1,12 @@
+title: CuriousWorld
+description: Fascinating Science & Facts
+baseurl: ""  # boş bırak github.io için
+url: "https://ysnslk.github.io/auto-content-site"
 
+theme: minima
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+markdown: kramdown
